@@ -14,11 +14,10 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  keep-history: false
+  keep-history: true
   target-branch: automatic-results
   verbose: true
   local-dir: automatic-results
   on:
     branch: workbench-cd
 
-    # useless commit just in order to trigger travis
