@@ -5,16 +5,14 @@ install: true
 git:
   depth: false
 script:
-  - rm automatic-results/*
   - echo "" > automatic-results/corpus.conllu
   - cat documents/*.conllu >> automatic-results/corpus.conllu
-  # - cat automatic-results/corpus.conllu | grep "sent_id"
 
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  keep-history: false
+  keep-history: true
   target-branch: automatic-results
   verbose: true
   local-dir: automatic-results
