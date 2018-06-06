@@ -1,2 +1,5 @@
+branches:
+  only:
+    - workbench-cd
 script:
   - ls *
