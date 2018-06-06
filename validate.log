@@ -1,0 +1,6 @@
+[Line                   10]: DEPREL can only be "root" if HEAD is 0
+[Tree number 1 on line 5]: HEAD == ID for 1
+[Tree number 1 on line 5]: Non-tree structure. Words 1,2,3,4 are not reachable from the root 0.
+*** FAILED *** with 3 errors
+Format errors: 1
+Syntax errors: 2
