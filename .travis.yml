@@ -8,7 +8,7 @@ script:
   - echo "" > automatic-results/corpus2.conllu
   - cat documents/CF0001.conllu >> automatic-results/corpus2.conllu
   - cat documents/CF0002.conllu >> automatic-results/corpus2.conllu
-  - cat corpus2.conllu | grep "sent_id"
+  - cat automatic-results/corpus2.conllu | grep "sent_id"
 
 deploy:
   provider: pages
