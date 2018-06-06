@@ -5,8 +5,7 @@ install: true
 git:
   depth: false
 script:
-  - echo "" > automatic-results/corpus.conllu
-  - cat documents/*.conllu >> automatic-results/corpus.conllu
+  - bash scripts/deploy.sh
 
 deploy:
   provider: pages
