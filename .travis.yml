@@ -20,3 +20,5 @@ deploy:
   local-dir: automatic-results
   on:
     branch: workbench-cd
+
+    # useless commit just in order to trigger travis
