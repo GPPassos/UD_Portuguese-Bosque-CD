@@ -1,15 +1,23 @@
 branches:
   only:
-    - workbench-cd
-
+  - workbench-cd
 install: true
-
 git:
   depth: false
-
 script:
-  - ls *
-  - rm corpus.conllu
-  - cat documents/CF0001.conllu >> corpus.conllu
-  - cat documents/CF0002.conllu >> corpus.conllu
-  - cat corpus.conllu | grep "sent_id"
+  - echo "" > automatic-results/corpus2.conllu
+  - cat documents/CF0001.conllu >> automatic-results/corpus2.conllu
+  - cat documents/CF0002.conllu >> automatic-results/corpus2.conllu
+  - cat corpus2.conllu | grep "sent_id"
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token:
+    secure: "KAemRz3aiCHcd9m0sFbIlB7BW1gVnII7d0KQmGuk9YBHu0jGSF4gHdxsglq0hliXUQstXRI26YNpPdODRe2NaOu07wBhsdIO4t0eQS/KS/mmh+p59q5fmAt6LBNxL/6SH/1/PJYbgpko442Dnm0Yx6x1ce88mRGWWl+hPOANuQ3HW96uY5q5ICJx/mMhoWZKWoHSd3aMf4r8ay55Z85hUX2rd36kCGBEajfOry//sLFJW29KrOyzL872AVkl2aixcoo7oEUMGV2FbxJD2YtvmTXMPdTsikvv/ya1kWdM1piqRv5i/urIE5kzmXY5YDHG4ZaAplhZIInl7uyxsHkAYG6uwyZZL+XqQTjhX7x1HV7OIpY3muap/Xzi+o12zR2AB4JBAUb3kAxDCRflPU+YJvtnlEed5g00S1wxfd0DQmg5AvwgQtV/kJ6/kRoq9zNDHxZfZ+cUfupsTS/dtuiYG2OfOLKw4WimI8MGzxAf6ONOO9J3CIa+2MabPis8cT4F3eq6lqw0zx0GHtokqY1qwf3WSCfybfMkalPo/5UvaiaobxDIgWc639i9MosoAh5U4haWW/NZsWUV0gVaKaK+ozDFp4ZML4N96NBSP0RUbnt4RLtUzx/JehmE/RCKJcDgE3qIPjdTh7gCXz6jPivH5WtlrGL1xY2VN9CkY1oqYN0="
+  keep-history: false
+  target-branch: automatic-results
+  verbose: true
+  local-dir: automatic-results
+  on:
+    branch: workbench-cd
