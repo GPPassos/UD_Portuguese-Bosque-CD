@@ -1,5 +1,15 @@
 branches:
   only:
     - workbench-cd
+
+install: true
+
+git:
+  depth: false
+
 script:
   - ls *
+  - rm corpus.conllu
+  - cat documents/CF0001.conllu >> corpus.conllu
+  - cat documents/CF0002.conllu >> corpus.conllu
+  - cat corpus.conllu | grep "sent_id"
