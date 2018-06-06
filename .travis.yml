@@ -5,10 +5,9 @@ install: true
 git:
   depth: false
 script:
-  - echo "" > automatic-results/corpus2.conllu
-  - cat documents/CF0001.conllu >> automatic-results/corpus2.conllu
-  - cat documents/CF0002.conllu >> automatic-results/corpus2.conllu
-  - cat automatic-results/corpus2.conllu | grep "sent_id"
+  - echo "" > automatic-results/corpus.conllu
+  - cat documents/*.conllu >> automatic-results/corpus.conllu
+  # - cat automatic-results/corpus.conllu | grep "sent_id"
 
 deploy:
   provider: pages
