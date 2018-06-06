@@ -9,6 +9,10 @@ bash ./scripts/join-documents.sh > automatic-results/corpus.conllu
 
 ## Run validate.py from UniversalDependencies/tools
 git clone https://github.com/UniversalDependencies/tools.git UniversalDependencies/tools
-cat documents/CF0001.conllu| python UniversalDependencies/tools/validate.py --lang pt 2> automatic-results/validate.log
+if cat documents/CF0001.conllu| python UniversalDependencies/tools/validate.py --lang pt 2> automatic-results/validate.log ; then
+    echo "validate.py successful!" ;
+else
+    echo "validate.py failed!" ;
+fi
 
 exit 0
