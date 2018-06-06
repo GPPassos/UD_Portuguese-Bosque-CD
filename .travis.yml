@@ -5,6 +5,7 @@ install: true
 git:
   depth: false
 script:
+  - rm automatic-results/*
   - echo "" > automatic-results/corpus.conllu
   - cat documents/*.conllu >> automatic-results/corpus.conllu
   # - cat automatic-results/corpus.conllu | grep "sent_id"
