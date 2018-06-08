@@ -2,5 +2,7 @@ This is the directory (associated to the branch) of outputs automatically genera
 
 This branch should never be modified manually, only by Travis-CI (the current automation tool).
 
+## Validation results: ##
+
 
   * `UniversalDependencies/tools/validate.py`: **FAILED** -- see `validate.log`
