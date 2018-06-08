@@ -9,7 +9,7 @@ OUTPUT_DIR="./automatic-results"
 bash ./scripts/join-documents.sh > $OUTPUT_DIR/corpus.conllu
 
 ## Run validate.py from UniversalDependencies/tools
-echo -e "## Validation results: ##\n"
+echo -e "## Validation results: ##\n" >> $OUTPUT_DIR/README.md
 
 git clone https://github.com/UniversalDependencies/tools.git UniversalDependencies/tools
 
