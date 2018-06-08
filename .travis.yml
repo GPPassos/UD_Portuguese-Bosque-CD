@@ -1,6 +1,7 @@
 branches:
   only:
   - workbench-cd
+  
 language: python
 # we use python because it preinstalls python dependencies which are necessary in scripts/deploy.sh
 python:
