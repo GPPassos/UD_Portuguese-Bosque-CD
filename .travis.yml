@@ -11,6 +11,7 @@ python:
 
 install:
   - pip install regex
+  - cpan JSON::Parse
 
 script:
   - bash scripts/deploy.sh

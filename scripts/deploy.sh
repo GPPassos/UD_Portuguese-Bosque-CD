@@ -22,5 +22,3 @@ fi
 ## Run conllu-stats.pl in order to produce stats.xml file
 cat $OUTPUT_DIR/corpus.conllu | perl UniversalDependencies/tools/conllu-stats.pl > $OUTPUT_DIR/stats.xml
 
-
-exit 0
