@@ -12,6 +12,7 @@ python:
 install:
   - pip install regex
   - cpanm --sudo JSON::Parse
+  - cpanm --sudo YAML
 
 script:
   - bash scripts/deploy.sh
