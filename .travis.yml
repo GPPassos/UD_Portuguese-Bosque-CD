@@ -1,3 +1,10 @@
+### 
+## Make sure the following values are correctly set up:
+  # branches: only:
+  # deploy: target-branch: 
+  # deploy: local-dir
+  # deploy: on: branch:
+
 branches:
   only:
   - workbench-cd
@@ -22,9 +29,9 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
-  target-branch: automatic-results
+  target-branch: automatic-results # name of the branch to which travis will push
   verbose: true
-  local-dir: automatic-results
+  local-dir: new-dir  # directory which will be pushed to target-branch
   on:
     branch: workbench-cd
 
