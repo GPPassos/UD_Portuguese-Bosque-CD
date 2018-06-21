@@ -20,10 +20,10 @@ else
 fi
 
 ## Run conllu-stats.pl in order to produce stats.xml file
-cat $OUTPUT_DIR/corpus.conllu | perl UniversalDependencies/tools/conllu-stats.pl &> $OUTPUT_DIR/stats.xml
+cat $OUTPUT_DIR/corpus.conllu | perl UniversalDependencies/tools/conllu-stats.pl 1> $OUTPUT_DIR/stats.xml
 
 ## Run mwtoken-stats.pl in order to produce mwtoken-stats.txt
-cat $OUTPUT_DIR/corpus.conllu | perl UniversalDependencies/tools/mwtoken-stats.pl &> $OUTPUT_DIR/mwtoken-stats.txt
+cat $OUTPUT_DIR/corpus.conllu | perl UniversalDependencies/tools/mwtoken-stats.pl 1> $OUTPUT_DIR/mwtoken-stats.txt
 
 ## Check if every sentence has an unique id in sent_id
 cat $OUTPUT_DIR/corpus.conllu | perl UniversalDependencies/tools/check_sentence_ids.pl &> $OUTPUT_DIR/unique_id_verification.log
