@@ -1,4 +1,3 @@
-[conllu-stats] No command-line arguments found. Standard input will be processed.
 <?xml version="1.0" encoding="UTF-8"?>
 <treebank>
   <!-- tokens means "surface tokens", e.g. Spanish "vámonos" counts as one token
